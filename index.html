@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab Group Wizardry</title>
+<link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#3b82f6',
+                        secondary: '#10b981'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-50 min-h-screen">
+    <div class="container mx-auto px-4 py-12">
+        <div class="max-w-md mx-auto bg-white rounded-xl shadow-md overflow-hidden md:max-w-2xl">
+            <div class="p-8">
+                <div class="flex items-center justify-center mb-8">
+                    <i data-feather="flask" class="text-primary w-12 h-12"></i>
+                    <h1 class="text-3xl font-bold text-gray-800 ml-4">Custom Syllabus Creator</h1>
+</div>
+                
+                <form id="labForm" class="space-y-6">
+                    <!-- Physics Lab -->
+                    <div class="lab-group-card">
+                        <div class="flex items-center mb-2">
+                            <i data-feather="zap" class="text-primary mr-2"></i>
+                            <h2 class="text-xl font-semibold text-gray-700">Physics Lab Group</h2>
+                        </div>
+                        <div class="flex space-x-4">
+                            <label class="radio-option">
+                                <input type="radio" name="physics" value="A" class="peer" required>
+                                <div class="radio-content">A</div>
+                            </label>
+                            <label class="radio-option">
+                                <input type="radio" name="physics" value="B" class="peer">
+                                <div class="radio-content">B</div>
+                            </label>
+</div>
+                    </div>
+                    
+                    <!-- Chemistry Lab -->
+                    <div class="lab-group-card">
+                        <div class="flex items-center mb-2">
+                            <i data-feather="droplet" class="text-primary mr-2"></i>
+                            <h2 class="text-xl font-semibold text-gray-700">Chemistry Lab Group</h2>
+                        </div>
+                        <div class="flex space-x-4">
+                            <label class="radio-option">
+                                <input type="radio" name="chemistry" value="A" class="peer" required>
+                                <div class="radio-content">A</div>
+                            </label>
+                            <label class="radio-option">
+                                <input type="radio" name="chemistry" value="B" class="peer">
+                                <div class="radio-content">B</div>
+                            </label>
+</div>
+                    </div>
+                    
+                    <!-- Computer Programming Lab -->
+                    <div class="lab-group-card">
+                        <div class="flex items-center mb-2">
+                            <i data-feather="code" class="text-primary mr-2"></i>
+                            <h2 class="text-xl font-semibold text-gray-700">Computer Programming Lab Group</h2>
+                        </div>
+                        <div class="flex space-x-4">
+                            <label class="radio-option">
+                                <input type="radio" name="programming" value="A" class="peer" required>
+                                <div class="radio-content">A</div>
+                            </label>
+                            <label class="radio-option">
+                                <input type="radio" name="programming" value="B" class="peer">
+                                <div class="radio-content">B</div>
+                            </label>
+</div>
+                    </div>
+                    
+                    <button type="submit" class="w-full bg-primary hover:bg-primary-600 text-white font-bold py-3 px-4 rounded-lg transition duration-200 flex items-center justify-center">
+                        <i data-feather="send" class="mr-2"></i>
+                        Submit Selections
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        feather.replace();
+    </script>
+<script src="https://huggingface.co/deepsite/deepsite-badge.js"></script>
+</body>
+</html>
