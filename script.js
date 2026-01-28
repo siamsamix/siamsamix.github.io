@@ -7,8 +7,15 @@ document.getElementById('labForm').addEventListener('submit', function(e) {
     
     // Here you would typically send the data to a server
     // For demo purposes, we'll just show an alert
-    alert(`Your selections have been saved!\n\nPhysics: Group ${physics}\nChemistry: Group ${chemistry}\nProgramming: Group ${programming}`);
-    
+    //alert(`Your selections have been saved!\n\nPhysics: Group ${physics}\nChemistry: Group ${chemistry}\nProgramming: Group ${programming}`);
+
+    let pdfFile = "pdf/"+physics+chemistry+programming+".pdf";
+    const link = document.createElement("a");
+    link.href = pdfFile;
+    link.download = "";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
     // You could also redirect or show a success message
     // window.location.href = 'success.html';
 });
